@@ -30,6 +30,7 @@ body {
   position: fixed;
   display: flex;
   height: 100vw;
+  width: 100%;
 }
 .logo img{
     width: 50px;
