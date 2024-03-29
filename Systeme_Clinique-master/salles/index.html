@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salles</title>
+    <link rel="stylesheet" href="salles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="salles.png">
+</head>
+<body>
+    <!--j'ai ajouté 1 container principal et 2 autres gauche et doit pour la position des 2 coté le nav qui est agauche et le nav +main -->
+<div class="container">
+<nav class="nav-gauche">
+    
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="home">
+            <a href="./home/index.html"><img src="home.png" alt="Home"></a>
+        </div>
+        <div class="salles">
+            <a href="index.html"><img src="salles.png" alt="Salle"></a>
+        </div>
+   
+</nav>
+    <div class="container-droit">
+    <nav class="nav">
+    <nav class="nav-haut">
+        <div class="service">
+            <span class="urgences">Urgences</span>
+            <div class="x"><a href="./home/index.html"><img src="cancel.png" alt="x"></a></div>
+        </div>
+        <div class="refresh">
+            <a href="./index.html"><img src="refresh.png" alt="Refresh"></a>
+        </div>
+        <select class="select-service">
+            <option value="URG-MED-CHIR"><span class="num-service">0001 - URG. MED. CHIR.</span></option>
+        </select>
+        <table class="clock">
+            <tr>
+              <td class="column"><span id="day"></span></td>
+              <td class="column1">
+                <span id="dayAbbr"></span>
+                <span id="month"></span>
+              </td>
+              <td class="trait"></td>
+              <td class="heure">
+                <div id="systemTime"></div>
+              </td>
+            </tr>
+          </table> 
+               
+        <div class="param">
+            <div class="traduction">
+                <a href="salles/indexEn.html"><img src="translationW.png" alt="traduction"></a>
+            </div>
+            <div class="decoP">
+                <a href="login/index.html"><img src="shuffle.png" alt="deconnexionP"></a>
+            </div>
+            <div class="deco">
+                <a href="login/index.html"><img src="deconnexion.png" alt="deconnexion"></a>
+            </div>
+        </div>
+            <div class="compte">
+                    <span class="nom-prenom">
+                        GUEMACHE Omar
+                    </span>
+                    <span class="fonction">
+                        Médecin
+                    </span>
+            </div>
+        </nav>  
+            <nav class="nav-general">
+                <div class="sortie-container">
+                    <button class="sortie"><a href="listeps/index.html">Sorties</a></button>
+                    <div class="circle"></div>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Rechercher...">
+                    <span class="search-icon"></span>
+                </div>
+                <div class="menu-container">
+                    <ul>
+                        <li><a href="#">URG+UHCD</a></li>
+                        <li><a href="#">URG</a></li>
+                        <li><a href="#">URGM</a></li>
+                        <li><a href="#">URGC</a></li>
+                        <li><a href="#">UHCDH</a></li>
+                        <li><a href="#">UHCDF</a></li>
+                    </ul>
+                </div>
+                <div class="btn-activite">
+                    <a href="statistiques.html" class="lien-activite">
+                        <img src="graphe.png" alt="Activité" class="icon">
+                        Activité
+                    </a>
+                </div>  
+            </nav>
+        
+        </nav>
+    <main>
+       
+        <section class="acceuil">
+        <div class="cote_gauche">
+            <div class="salle_iao">
+                <p class="titre">Salle IAO</p>
+            </div>
+            <div class="zone_attente">
+                <p class="titre">Zone d'attente</p>
+                <div class="attente_assise">
+                    <p class="titre_secondaire">Attente assise</p>
+                    <div class="attente_assise"></div>
+                </div>
+                <div class="attente couchee">
+                    <p class="titre_secondaire">Attente couchée</p>
+                    <div class="attente_couchee"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cote_droit"> 
+            <div class="zone_soins">
+                <p class="titre">Zone de soins</p>
+                <div class="salles_soins">
+                    <div class="soin1">
+                        <p class="titre_secondaire">Salle de soin 1</p>
+                    </div>
+                    <div class="soin2">
+                        <p class="titre_secondaire">Salle de soin 2</p>
+                    </div>
+                    <div class="dechocage">
+                        <p class="titre_secondaire">Salle de déchocage</p>
+                    </div>
+                    <div class="platre">
+                        <p class="titre_secondaire">Salle de platre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="uhcd">
+                <p class="titre">UHCD</p>
+                <div class="uhcds">
+                    <div class="uhcdh">
+                        <p class="titre_secondaire">UHCDH</p>
+                    </div>
+                    <div class="uhcdf">
+                        <p class="titre_secondaire">UHCDF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plateau_technique">
+                <p class="titre">Plateau technique</p>
+                <div class="plateau">
+                    <div class="radio">
+                        <p class="titre_secondaire">Radio</p>
+                    </div>
+                    <div class="echo">
+                        <p class="titre_secondaire">Echo</p>
+                    </div>
+                    <div class="scanner">
+                        <p class="titre_secondaire">Scanner</p>
+                    </div>
+                    <div class="irm">
+                        <p class="titre_secondaire">IRM</p>
+                    </div>
+                    <div class="autres">
+                        <p class="titre_secondaire">Autres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="sortieH">
+            <div class="item">
+                <img src="Sortie.png" alt="Transfer">
+                <p class="type_sortie">Transfert</p>
+              </div>
+              <div class="item">
+                <img src="Sortie.png" alt="Sortie hospital">
+                <p class="type_sortie">Sortie hôpital</p>
+              </div>
+              <div class="item">
+                <img src="Sortie.png" alt="Sortie mutation">
+                <p class="type_sortie">Sortie Mutation</p>
+              </div>
+              <div class="item">
+                <img src="Sortie.png" alt="UHCD">
+                <p class="type_sortie"
+                >UHCD</p>
+            </div>
+        </section> 
+    </main>
+</div>
+</div>
+</body>
+<script>
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    function updateClock() {
+      const now = new Date();
+      const day = now.getDate();
+      const dayAbbr = capitalizeFirstLetter(now.toLocaleDateString('fr-FR', { weekday: 'short' }));
+      const month = capitalizeFirstLetter(now.toLocaleDateString('fr-FR', { month: 'long' }));
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const time = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    
+      document.getElementById('day').textContent = day;
+      document.getElementById('dayAbbr').textContent = dayAbbr;
+      document.getElementById('month').textContent = month;
+      document.getElementById('systemTime').textContent = time;
+    }
+    
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>  
+</html>
