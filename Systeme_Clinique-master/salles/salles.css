@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
+ 
   }
 
 .container{
@@ -26,7 +26,11 @@ body {
     width: 5vw;
     
   }
-
+.navcontent{
+  position: fixed;
+  display: flex;
+  height: 100vw;
+}
 .logo img{
     width: 50px;
     height: 50px;
@@ -44,13 +48,15 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
+    padding-left:  10vw;
+    margin-top: 100px;
   
   }
   
   /*nav haut*/
 .nav{
-    width: 100vw;
-    position: fixed;
+   flex: 1;
+   
 }
 nav.nav-haut {
 
