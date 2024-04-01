@@ -207,7 +207,6 @@ padding: 20px;
     background-color: #FFFFFF;
     align-items: center;
     height: 5vh;
-    margin-top: 10px;
     position: relative;
     display: flex;
     flex-direction: row; 
@@ -340,10 +339,10 @@ padding-right: 30px;
   main{
 
     display: grid;
-    grid-template-columns: 80% 20%; /* 70% for the first section, 30% for the second */
-      width: 100vw;
+    grid-template-columns: 80% 20%;
+    width: 100vw;
       padding-left:  6vw;
-      margin-top: 200px;
+      margin-top: 160px;
     grid-gap: 60px;
     
     }
@@ -358,7 +357,6 @@ padding-right: 30px;
   
   .cote_droit {
    display: grid;
-
    grid-template-rows: auto auto auto;
   }
   
