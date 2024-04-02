@@ -1,0 +1,360 @@
+* {
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    margin: 0; /* Pour enlever les marges par défaut du navigateur */
+    padding: 0; /* Pour enlever le padding par défaut du navigateur */
+    height: 100vh; /* 100% de la hauteur de la fenêtre visible */
+    width: 100vw;
+
+}
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+
+     /* Ensure the container fills the entire height of the body */
+}
+.nav-gauche{
+    background: #005E5D;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 12px 0; 
+    gap: 4vh;
+    width: 5vw;
+  }
+  .navcontent{
+    position: fixed;
+    display: flex;
+    height: 100vw;
+    width: 100%;
+  }
+.logo img{
+    width: 50px;
+    height: 50px;
+    padding-bottom: 100px;
+}
+
+.home img,
+.salles img {
+    width: 42px;
+    height: 42px;
+
+}
+  
+
+  
+  /*nav haut*/
+.nav{
+   flex: 1;
+   
+}
+nav.nav-haut {
+    background: #005E5D;
+    height: 9vh;
+    display: flex;
+   justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .service {
+    height: 9vh;
+    background: #77A6A5;
+    padding-left: 10px;
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+
+  }
+  .urgences {
+  
+    width: 141px;
+    overflow-wrap: break-word;
+    font-family: 'Roboto Condensed';
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .x {
+    margin: 2px 0;
+    width: 24px;
+    height: 24px;
+    padding-right: 10px;
+  }
+  .refresh {
+padding: 20px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .select-service {
+    border-radius: 2px;
+    background: #FFFFFF;
+    position: relative;
+    margin: 11px 28px 7px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 13px 10px 16px;
+    width: 603px;
+    height: fit-content;
+  }
+  .clock {
+    position: relative;
+    margin: 7px 29.9px 3px 0;
+    width: calc(199px + 20px); /* Ajuster la largeur pour l'espace entre les cellules */
+    height: fit-content;
+    color: #FFFFFF;
+    border-collapse: collapse;
+  }
+  .clock td {
+    padding: 0;
+  }
+  
+  .column1 span {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+  }
+  
+  .column {
+    font-weight: 500;
+    font-size: 40px;
+  }
+  
+  .column1 {
+    font-weight: 500;
+    font-size: 16px;
+    border-right: 3px solid #FFFFFF;
+  }
+  
+  .heure {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  #systemTime {
+    margin-left: 10px;
+  }
+ 
+  .param{
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+
+  }
+  
+  
+  .traduction{
+  
+    width: 20px;
+    height: 20px;
+  
+  }
+  
+  .decoP{
+ 
+    width: 35px;
+    height: 35px;
+   
+  }
+  
+  .deco{
+   
+    width: 35px;
+    height: 35px;
+ 
+  }
+  
+  .compte{
+    margin: 5px 0 2px 0;
+    display: flex;
+    flex-direction: column;
+    padding-right:30px ;
+    padding-left: 20px;
+  }
+  
+  .nom-prenom{
+  
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 17px;
+  }
+  
+  .fonction{
+    color: #FFFFFF;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+
+nav.nav-genaral{
+    display: flex;
+    align-items: center;
+    background-color:rgba(217, 217, 217, 0.61) ;
+    padding: 3px;
+    gap: 10px;
+    
+    }
+.dossierEtat img,.infoPatient img{
+    width: 50px;
+    height: 50px;
+
+}
+.mesurePatient img{
+    width: 35px;
+    height: 35px;
+   
+}
+.infoPatient,.mesurePatient{
+ display: flex;
+ align-items: center;
+}
+.nomPrenom, .dossier-heure , .poids ,.taille,.localisation{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+ p{margin: 3px;}
+
+.mesurePatient{
+margin-left: auto;
+padding-right: 70px;
+}
+.dossierSalle{
+    display: flex;
+
+}
+.dossierDate div{
+    display: flex;
+    flex-direction: column;
+}
+.dossierSalle div{
+    display: flex;
+    flex-direction: column;
+}
+.dossierDate, .dossierSalle{
+    display: flex;
+    align-items: center;
+}
+.line{
+    background: #000000;
+    margin-right: 7px;
+    margin-left: 7px;
+    width: 1px;
+    height: 73.2px;
+  }
+
+
+
+
+
+
+
+
+.nav-secondaire div a:hover {
+    background-color: #353434;
+    color: #FFFFFF; 
+} 
+.nav-secondaire{
+    display: flex;
+    background-color:rgba(217, 217, 217, 1) ;
+    }
+.sous-nav{
+        display: flex; 
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: white;
+    }
+.sous-nav a{
+        padding:10px;
+    }
+    .sous-nav a:hover  
+    { 
+    color: rgba(0, 94, 93, 1);;
+    border-bottom: 4px solid rgba(0, 94, 93, 1);; /* Ajoute une ligne noire en dessous du lien */
+
+       }
+img{
+    width: 29px;height: 29px;
+    }
+.nav-syntheses,.nav-dossier,
+.nav-document,.nav-prescription,
+.nav-ordSortie,.nav-planSoins{
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    }
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    }
+.nav-syntheses{
+    background-color: rgba(53, 52, 52, 1);
+    }
+
+
+.container-hero{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left:  7.7vw;
+    margin-top: 260px;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+
+.ligne-1,.ligne-3,
+.ligne-2,.ligne-4,
+.ligne-5{ 
+    display: grid;gap: 10px;
+}
+.ligne-1{
+    grid-template-columns: auto auto auto;
+}
+.ligne-2,.ligne-4
+{
+   grid-template-columns: auto auto auto auto;
+}
+.ligne-3
+{
+  grid-template-columns: auto auto ;
+}
+.ligne-5
+{
+    grid-template-columns:auto auto;
+}
+.admission , .medecins , .personneConfidente, .allergies, .antecedents,
+ .observations , .vaccins, .examenParamedical, .examenMedical
+, .conclusion , .constantes,.fiche,.fiche,.prescription,.orientation,.documents
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    color:rgba(0, 94, 93, 1); ;
+    height: 14vh;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+    font-weight: 500;
+   padding: 10px;
+   gap: 5px;
+   
+  
+   }
+ 

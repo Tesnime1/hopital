@@ -2,12 +2,219 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
-    <title>Dossier Patient</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    
+<div class="container">
+<div class="navcontent">   
+<nav class="nav-gauche"> 
+  <div class="logo">
+     <img src="./images/logo.png" alt="Logo">
+  </div>
+<div class="home">
+    <a href="./home/index.html"><img src="./images/home.png" alt="Home"></a>
+</div>
+<div class="salles">
+    <a href="index.html"><img src="./images/salles.png" alt="Salle"></a>
+</div>
+</nav>
+
+    <nav class="nav">
+    <nav class="nav-haut">
+        <div class="service">
+            <span class="urgences">Urgences</span>
+            <div class="x"><a href="./home/index.html"><img src="./images/cancel.png" alt="x"></a></div>
+        </div>
+        <div class="refresh">
+            <a href="./index.html"><img src="./images/refresh.png" alt="Refresh"></a>
+        </div>
+        <select class="select-service">
+            <option value="URG-MED-CHIR"><span class="num-service">0001 - URG. MED. CHIR.</span></option>
+        </select>
+        <table class="clock">
+            <tr>
+              <td class="column"><span id="day"></span></td>
+              <td class="column1">
+                <span id="dayAbbr"></span>
+                <span id="month"></span>
+              </td>
+              <td class="trait"></td>
+              <td class="heure">
+                <div id="systemTime"></div>
+              </td>
+            </tr>
+          </table> 
+               
+        <div class="param">
+            <div class="traduction">
+                <a href="salles/indexEn.html"><img src="./images/translationW.png" alt="traduction"></a>
+            </div>
+            <div class="decoP">
+                <a href="login/index.html"><img src="./images/shuffle.png" alt="deconnexionP"></a>
+            </div>
+            <div class="deco">
+                <a href="login/index.html"><img src="./images/deconnexion.png" alt="deconnexion"></a>
+            </div>
+        </div>
+            <div class="compte">
+                    <span class="nom-prenom">
+                        GUEMACHE Omar
+                    </span>
+                    <span class="fonction">
+                        Médecin
+                    </span>
+            </div>
+    </nav>
+    <nav class="nav-genaral">
+        <div class="dossierEtat">
+            <img src="./images/icons8NouveauDossier301.png" alt="">
+           
+        </div>
+        <div class="dossierDate">
+            <div>
+            <p class="Urgence">Urgence</p>
+            <p class="dossier-heure">1H23</p>
+            <p class="dossier-date">14/03/2024</p>
+        </div>
+            <div class="line"></div>
+        </div>
+        <div class="dossierSalle">
+            <div>
+            <p class="localisation">Salle 1</p>
+            <p class="hébergement">Héb:0001</p>
+            <p class="médical">Méd:0001</p>
+        </div>
+        <div class="line"></div>
+         
+        </div>
+        <div class="infoPatient">
+        <img src="./images/icons8Lady501.png" alt="">
+        <div>
+            <p class="nomPrenom">MEZOUI AHLEM</p>
+        <span>
+            <p>Née le 29/02/1989 </p>
+            <p class="IP">IP:12345678</p>
+        </span>
+        </div>
+        </div>
+        <div class="mesurePatient">
+            <img src="./images/icons8Badge322.png" alt="">
+            <div>
+            <p class="poids">Poids 57</p>
+            <p class="taille">Taille 1.62</p>
+        </div>
+        </div>
+    </nav>
+    <nav class="nav-secondaire">
+        <div class="nav-syntheses"><img src="images/icons8-heart-health-24Blanc 1.png" alt=""> <a href="./synthéses/index.html">Synthéses</a></div>
+        <div class="nav-dossier"><img src="images/icons8-folder-24 1.png" alt=""><a href="">Dossier</a></div>
+        <div class="nav-document"><img src="images/icons8-document-30.png" alt=""><a href="">Document</a></div>
+        <div class="nav-prescription"><img src="images/icons8-ball-point-pen-50.png" alt=""><a href="">Presciption</a></div>
+        <div class="nav-ordSortie"><img src="images/icons8-prescription-32.png" alt=""><a href="">Ord.Sortie</a></div>
+        <div class="nav-planSoins"><img src="images/icons8-hospital-bed-30.png" alt=""><a href="">Plan de soins</a></div>
+    </nav>
+    <nav class="sous-nav">
+     <div>
+        <img src="./images/icons8Btiment501.png" alt="">
+        <a href="">Séjour</a>
+     </div>
+     <div>
+        <img src="./images/icons8PersonneHomme641.png" alt="">
+        <a href="">Patient</a>
+     </div>
+    </nav>
+</nav>
+</div>
+<div class="container-hero">
+<div class="ligne-1">
+    <div class="admission">
+        <img src="./images/icons8Entre501.png" alt="">Admission</div>
+    <div class="medecins">
+    <img src="./images/icons8Mdecin641.png" alt="">
+    Médecins</div>
+    <div class="personneConfidente">
+        <img src="./images/icons8Padlock301.png" alt="">
+        Personne confidente</div>
+</div>
+<div class="ligne-2">
+    <div class="allergies">
+        <img src="./images/icons8FloconDeNeige501.png" alt="">
+        Allergies
+    </div>
+    <div class="antecedents">
+        <img src="./images/icons8Document501.png" alt="">Antécedents</div>
+    <div class="observations">
+        <img src="./images/icons8AddFile241.png" alt="">
+        Observations
+    </div>
+    <div class="vaccins">
+        <img src="./images/icons8Syringe501.png" alt="">
+        Vaccins
+    </div>
+</div>
+<div class="ligne-3">
+    <div class="examenParamedical">
+        <img src="./images/icons8Infirmier241.png" alt="">
+        Examen Paramedical
+    </div>
+    <div class="examenMedical">
+        <img src="./images/icons8Mdecin641.png" alt="">
+        Examen Médical
+    </div>
+</div>
+<div class="ligne-4">
+
+    <div class="conclusion">
+        <img src="./images/icons8Doctor641.png" alt="">
+        Conclusion
+    </div>
+    <div class="constantes">
+        <img src="./images/icons8Ecg321.png" alt="">
+        Constantes</div>
+    <div class="fiche">
+        <img src="/Dossier Patient/images/" alt="">Fiche</div>
+    <div class="prescription">
+        <img src="./images/icons8BallPointPen501.png" alt="">Prescription</div>
+</div>
+<div class="ligne-5">
+    <div class="orientation">
+    <img src="./images/icons8Orientation301.png" alt="">
+        Orientation
+    </div>
+    <div class="documents">
+        <img src="./images/icons8Documents501.png" alt="">Documents</div>
+</div>
+</div>
+ </div>
+
 </body>
+<script>
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    function updateClock() {
+      const now = new Date();
+      const day = now.getDate();
+      const dayAbbr = capitalizeFirstLetter(now.toLocaleDateString('fr-FR', { weekday: 'short' }));
+      const month = capitalizeFirstLetter(now.toLocaleDateString('fr-FR', { month: 'long' }));
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const time = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    
+      document.getElementById('day').textContent = day;
+      document.getElementById('dayAbbr').textContent = dayAbbr;
+      document.getElementById('month').textContent = month;
+      document.getElementById('systemTime').textContent = time;
+    }
+    
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>  
+
 </html>
