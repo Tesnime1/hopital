@@ -13,7 +13,8 @@ body{
     display: flex;
     height: 100vh;
     width: 100%;
-
+    overflow-y: hidden;
+    overflow-x: hidden;
      /* Ensure the container fills the entire height of the body */
 }
 .nav-gauche{
@@ -24,7 +25,7 @@ body{
     align-items: center;
     padding: 14px 12px 0; 
     gap: 4vh;
-    width: 5vw;
+    width: 3vw;
   }
   .navcontent{
     position: fixed;
@@ -44,8 +45,6 @@ body{
     height: 42px;
 
 }
-  
-
   
   /*nav haut*/
 .nav{
@@ -253,33 +252,80 @@ padding-right: 70px;
     width: 1px;
     height: 73.2px;
   }
-.nav-secondaire div a:hover {
-    background-color: #353434;
-    color: #FFFFFF; 
-} 
-.nav-secondaire{
+  .nav-secondaire{
     display: flex;
-    background-color:rgba(217, 217, 217, 1) ;
-    }
-.sous-nav{
-        display: flex; 
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background-color: white;
-    }
-.sous-nav a{
-        padding:10px;
-    }
-    .sous-nav a:hover  
-    { 
-    color: rgba(0, 94, 93, 1);;
-    border-bottom: 4px solid rgba(0, 94, 93, 1);; /* Ajoute une ligne noire en dessous du lien */
+    background-color: #D6D6D6;
+    height: 4vh;
+  }
+  
+  .nav-secondaire a {
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 6px;
+    color: #000000;
+  }
+  
+  .nav-secondaire img {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+  }
+  
+  .nav-secondaire a:hover,
+  .nav-secondaire a.active {
+    background-color: #353434;
+    color: #FFFFFF;
+  }
+  
+  .nav-secondaire a:hover img,
+  .nav-secondaire a.active img {
+    filter: brightness(0) invert(1);
+  }
+  
+  .sous-nav {
+    display: flex;
+  
+    gap: 10px;
+  }
+  .sous-nav div{
+    display: flex;
+    align-items: center;
 
-       }
-img{
-    width: 29px;height: 29px;
-    }
+
+  }
+  .sejour {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .patientim {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .sous-nav a {
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    color: #000000;
+  }
+  
+  .sous-nav a:hover{
+    background-color: #FFFFFF;
+    color: #005E5D;
+    border-bottom: 3px solid #005E5D;
+  }
+  
+  .sous-nav a:hover img {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(41%) saturate(1481%) hue-rotate(139deg) brightness(93%) contrast(100%);
+  }
+  
+  img{
+      width: 29px;
+      height: 29px;
+  }
+  
 .nav-syntheses,.nav-dossier,
 .nav-document,.nav-prescription,
 .nav-ordSortie,.nav-planSoins{
@@ -289,23 +335,20 @@ img{
     align-items: center;
     gap: 3px;
     }
-.nav-secondaire a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    }
-.nav-syntheses{
-    background-color: rgba(53, 52, 52, 1);
-    }
+
 
 
 .container-hero{
+  z-index: 1;
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding-left:  7.7vw;
-    margin-top: 260px;
-    gap: 10px;
+    margin-left: 50px;
+    padding-left:  4vw;
+    margin-top: 270px;
     padding-right: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
 }
 .ligne-1,.ligne-3,
 .ligne-2,.ligne-4,

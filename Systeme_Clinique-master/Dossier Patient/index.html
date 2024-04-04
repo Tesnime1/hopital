@@ -111,22 +111,26 @@
         </div>
     </nav>
     <nav class="nav-secondaire">
-        <div class="nav-syntheses"><img src="images/icons8-heart-health-24Blanc 1.png" alt=""> <a href="./synthéses/index.html">Synthéses</a></div>
-        <div class="nav-dossier"><img src="images/icons8-folder-24 1.png" alt=""><a href="">Dossier</a></div>
-        <div class="nav-document"><img src="images/icons8-document-30.png" alt=""><a href="">Document</a></div>
-        <div class="nav-prescription"><img src="images/icons8-ball-point-pen-50.png" alt=""><a href="">Presciption</a></div>
-        <div class="nav-ordSortie"><img src="images/icons8-prescription-32.png" alt=""><a href="">Ord.Sortie</a></div>
-        <div class="nav-planSoins"><img src="images/icons8-hospital-bed-30.png" alt=""><a href="">Plan de soins</a></div>
+        <div class="nav-syntheses"><a href="./synthéses/index.html" onclick="toggleActive(this)"><img src="images/icons8-heart-health-24Blanc 1.png" alt=""> Synthéses</a></div>
+        <div class="nav-dossier"><a href="./synthéses/index.html" onclick="toggleActive(this)"><img src="images/icons8-folder-24 1.png" alt="">Dossier</a></div>
+        <div class="nav-document"><a href="./synthéses/index.html" onclick="toggleActive(this)"><img src="images/icons8-document-30.png" alt="">Document</a></div>
+        <div class="nav-prescription"><a href="./synthéses/index.html" onclick="toggleActive(this)"><img src="images/icons8-ball-point-pen-50.png" alt="">Presciption</a></div>
+        <div class="nav-ordSortie"><a href="./synthéses/index.html" onclick="toggleActive(this)"><img src="images/icons8-prescription-32.png" alt="">Ord.Sortie</a></div>
+        <div class="nav-planSoins"><a href="./synthéses/index.html" onclick="toggleActive(this)"><img src="images/icons8-hospital-bed-30.png" alt="">Plan de soins</a></div>
     </nav>
     <nav class="sous-nav">
      <div>
-        <img src="./images/icons8Btiment501.png" alt="">
-        <a href="">Séjour</a>
+        <a href="" onclick="toggleActive4(this)"> 
+        <img src="./images/icons8Btiment501.png"class="sejour" alt="">
+        Séjour
+        </a>
      </div>
      <div>
-        <img src="./images/icons8PersonneHomme641.png" alt="">
-        <a href="">Patient</a>
-     </div>
+        <a href="" onclick="toggleActive4(this)"> <img src="./images/icons8PersonneHomme641.png" class="patientim" alt="">
+        Patient
+        </a>
+    </div>
+
     </nav>
 </nav>
 </div>
@@ -232,6 +236,15 @@
     
     setInterval(updateClock, 1000);
     updateClock();
+    function toggleActive(element) {
+    const navLinks = document.querySelectorAll('.nav3 a');
+        
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    element.classList.add('active');
+    }
 </script>  
 
 </html>
