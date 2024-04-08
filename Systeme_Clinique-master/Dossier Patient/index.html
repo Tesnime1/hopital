@@ -22,6 +22,9 @@
 <div class="salles">
     <a href="index.html"><img src="./images/salles.png" alt="Salle"></a>
 </div>
+<div class="dossierP">
+    <a href="index.html"><img src="images/personneO.png" alt="dossierP"></a>
+</div>
 </nav>
 
     <nav class="nav">
@@ -36,19 +39,15 @@
         <select class="select-service">
             <option value="URG-MED-CHIR"><span class="num-service">0001 - URG. MED. CHIR.</span></option>
         </select>
-        <table class="clock">
-            <tr>
-              <td class="column"><span id="day"></span></td>
-              <td class="column1">
-                <span id="dayAbbr"></span>
-                <span id="month"></span>
-              </td>
-              <td class="trait"></td>
-              <td class="heure">
-                <div id="systemTime"></div>
-              </td>
-            </tr>
-          </table> 
+        <div class="clock">
+            <div id="day" class="column"></div>
+            <div class="column1">
+              <span id="dayAbbr"></span>
+              <span id="month"></span>
+            </div>
+            <div class="linehor"></div>
+            <div id="systemTime" class="heure"></div>
+        </div> 
                
         <div class="param">
             <div class="traduction">
@@ -77,28 +76,30 @@
         </div>
         <div class="dossierDate">
             <div>
-            <p class="Urgence">Urgence</p>
-            <p class="dossier-heure">1H23</p>
-            <p class="dossier-date">14/03/2024</p>
-        </div>
+                <div class="centrer_date_urg">
+                    <p class="Urgence">Urgence</p>
+                    <p class="dossier-heure">1H23</p>
+                </div>                        
+                <p class="dossier-date">14/03/2024</p>
+            </div>
+                <div class="line"></div>
+            </div>
+            <div class="dossierSalle">
+                <div>
+                <p class="localisation">Salle 1</p>
+                <p class="hebergement">Héb: 0001</p>
+                <p class="medical">Méd: 0001</p>
+            </div>
             <div class="line"></div>
-        </div>
-        <div class="dossierSalle">
+
+            </div>
+            <div class="infoPatient">
+            <img src="./images/icons8Lady501.png" alt="">
             <div>
-            <p class="localisation">Salle 1</p>
-            <p class="hébergement">Héb:0001</p>
-            <p class="médical">Méd:0001</p>
-        </div>
-        <div class="line"></div>
-         
-        </div>
-        <div class="infoPatient">
-        <img src="./images/icons8Lady501.png" alt="">
-        <div>
-            <p class="nomPrenom">MEZOUI AHLEM</p>
-        <span>
-            <p>Née le 29/02/1989 </p>
-            <p class="IP">IP:12345678</p>
+                <p class="nomPrenom">MEZOUI AHLEM</p>
+            <span class="naiss-IP">
+                <p class="naiss">Née le 29/02/1989 </p>
+                <p class="IP">IP:12345678</p>
         </span>
         </div>
         </div>
@@ -121,7 +122,7 @@
     <nav class="sous-nav">
      <div>
         <a href="" onclick="toggleActive4(this)"> 
-        <img src="./images/icons8Btiment501.png"class="sejour" alt="">
+        <img src="./images/sejourN.png"class="sejour" alt="">
         Séjour
         </a>
      </div>
@@ -237,7 +238,7 @@
     setInterval(updateClock, 1000);
     updateClock();
     function toggleActive(element) {
-    const navLinks = document.querySelectorAll('.nav3 a');
+    const navLinks = document.querySelectorAll('.nav-secondaire a');
         
     navLinks.forEach(link => {
       link.classList.remove('active');
