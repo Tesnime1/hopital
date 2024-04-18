@@ -387,12 +387,16 @@ img{
    width: 100%;
   
     padding-left:  7.7vw;
-    padding-top: 270px;
+    margin-top: 200px;
+    padding-bottom: 10PX;
     gap: 10px;
     padding-right: 20px;
     z-index: 1;
     overflow: auto;
   
+}
+.container-hero::-webkit-scrollbar {
+  display: none;
 }
 
 .ligne-1,.ligne-3,
