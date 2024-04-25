@@ -213,7 +213,272 @@
 </div>
 </div>
  </div>
+<div id="popupOrientation" class="popupOrientation">
+   <div class="popupOrientation-content">
+        <nav class="nav-orientation">
+            <div class="titre-orientation">
+                <div class="logoOrientation">
+                    <img src="images/orientation.png" alt="LogoOrientation">
+                </div>
+                <h3>Orientation</h3>
+            </div>
+            <a href="#" onclick="closePopupOrientation()" class="closePopupOrientation"><img src="images/x.png" alt="x"></a>
+        </nav>
+        <div class="nav-main">
+            <nav class="nav-DetailOrientation">
+                <a href="#" onclick="toggleActive1(this, 'non-déterminée')" class="active1"><img src="images/questionMarque.png" alt="Nondeter">Non déterminée</a>
+                <a href="#" onclick="toggleActive1(this, 'sortie-hôpital')" ><img src="images/Sortie.png" alt="sortie">Sortie hôpital</a>
+                <a href="#" onclick="toggleActive1(this, 'uhcd')" ><img src="images/uhcd.png" alt="uhcd">UHCD</a>
+                <a href="#" onclick="toggleActive1(this, 'transfert')" ><img src="images/transfert.png" alt="Nondeter">Transfert</a>
+                <a href="#" onclick="toggleActive1(this, 'sortie-mutation')" ><img src="images/Sortie.png" alt="sortie">Sortie Mutation</a>
+                <a href="#" onclick="toggleActive1(this, 'deces')" ><img src="images/deces.png" alt="Nondeter">Décès</a>
+            </nav>
+            <main class="mainOrientation">
+             
+               
+                    
+             
+                <!-- Formulaire pour "Sortie hôpital" -->
+                <form class="form-sortie-hopital" id="form-sortie-hôpital" style="display: none;">
+                    <div>
+                    <label for="orientationsortie">Orientation (précision)</label>
+                    <select id="orientationsortie" class="orientationsortie" name="orientationsortie">
+                        <option value=""></option>
+                        <option value="PSA">PSA: partie sans attendre prise en charge</option>
+                        <option value="REO">REO: reorientation directe sans soin</option>
+                        <option value="DOM">DOM: retour au domicile</option>
+                        <option value="SCAM">SCAM: sortie contre avis médical</option>
+                        <option value="FUG">FUG: sortie du service à l'insu du personnel soignant</option>
+                        <option value="HAD">HAD: hospitalisation à domicile</option>
+                        <option value="HMS">HMS: hospitalisation médico sociale</option>
+                    </select><br><br>
+                    </div>
+                    <div>
+                    <label for="personne-prevenue">Personne prévenue:</label>
+                    <textarea id="personne-prevenue" class="personne-prevenue" name="personne-prevenue"></textarea><br><br>
+                   </div>
+                   <div>
+                    <label for="certificat-refus">Certificat de refus de soins<br> et/ou d'hospitalisation signé:</label>
+                    <input type="radio" class="certificat-refus" id="oui" name="certificat-refus" value="oui">Oui
+                    <input type="radio" class="certificat-refus" id="non" name="certificat-refus" value="non">Non
+                    </div>
+                    <div class="button-container">
+                        <button type="reset"><img src="images/restart.png" alt="reinitialiser">Réinitialiser</button>
+                        <button type="submit"><img src="images/saveclose.png" alt="saveclose">Enregistrer et fermer</button>
+                    </div>
+                </form>
+                <!-- Formulaire pour "UHCD" -->
+       <form class="form-uhcd" id="form-uhcd"  style="display: none;" >
+            <div class="G-groupe">
+                <label class="label-groupe">Groupe</label>
+                <div class="radio-group">
+                    <div>
+                    <input type="radio" class="group" id="group1" name="options">
+                    <label class="group1" for="group1">
+                        <div class="container-10">
+                            <span class="g">G1 </span>
+                        </div>     
+                         <div> Groupe 1</div> 
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" class="group" id="group2" name="options">
+                    <label for="group2">
+                        <div class="container-60">
+                            <span class="g">G2</span>
+                        </div>
+                        <div> Groupe 2</div> 
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" class="group" id="group3" name="options">
+                    <label for="group3">
+                        <div class="container-19">
+                            <span class="g">G3</span>   
+                        </div>
+                        <div> Groupe 3</div> 
+                    </label>
+                </div>
+                </div>
+                </div>
+          <div class="list">
+                <div class="vide"> </div>
+                <div class="groupe-list">
+                <ul>
+                    <li>Groupe 1: retour domicile prévu sous 24H</li>
+                    <li>Groupe 2: période d'observation</li>
+                    <li>Groupe 3: patient hospitalisé dans l'attente de place</li>
+                </ul>
+            </div>
+            </div>
+                <div class="G-place">
+                    <label>Place trouvée</label>
+                    <input type="checkbox" name="place_trouvee">
+                </div>
+                <div class="G-date_mutation">
+                    <label>Date et heure prévue de mutation</label>
+                    <input type="datetime-local" id="date_heure_mutation" name="date_heure_mutation" min="" placeholder="jj/mm/aaaa --:--">
+                    <p id="messageErreur" style="color: red; display: none;">La date de mutation ne peut pas être ultérieure à aujourd'hui.</p>
+                </div>
+                <div class="G-mobilité">
+                    <label>Mobilité</label>
+                    <select name="mobilité" class="mobilité">
+                      <option value="" selected disabled>-- sélectionner une option --</option>
+                    </select>
+                </div>
+                <div class="G-button">
+                    <button type="reset"><img src="images/restart.png" alt="reinitialiser">Réinitialiser</button>
+                    <button type="submit" id="boutonVerifier"><img src="images/saveclose.png" alt="saveclose">Enregistrer et fermer</button>
+                </div>
+                </form>
+                <!-- Formulaire pour "Transfert" -->
+                <form class="form-transfert" id="form-transfert" style="display: none;">
+                <div class="div-transfert">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination">
+                </div>
+                <div class="div-transfert">
+                    <label for="etablissement-destination">Etablissement de destination</label>
+                    <input type="text" id="etablissement-destination" name="etablissement-destination">
+                </div>
+                <div class="div-transfert">
+                    <label for="place_trouveeT">Place trouvée</label>
+                    <input type="checkbox" id="place_trouveeT" name="place_trouveeT">
+                </div>
+                <div class="div-transfert">
+                    <label for="dh-prevueT">Date et heure prévue de transfert</label>
+                    <input type="datetime" id="dh-prevueT" name="dh-prevueT">
+                </div>
+                <div class="div-transfert">
+                    <label for="patienta">Patient accompagné</label>
+                    <input type="checkbox" id="patienta" name="patienta">
+                </div>
+                <div class="div-transfert">
+                    <label for="obc">Observations accompagnant</label>
+                    <textarea id="obc" name="obc"></textarea>
+                </div>
+                <div >
+                    <label for="mobilite">Mobilité</label>
+                    <select id="mobilite" name="mobilite">
+                    <option value=""></option>
+                    </select>
+                </div>
+                <div class="G-button">
+                    <button type="reset"><img src="images/restart.png" alt="reinitialiser">Réinitialiser</button>
+                    <button type="submit"><img src="images/saveclose.png" alt="saveclose">Enregistrer et fermer</button>
+                </div>
+            </form>
+                <!-- Formulaire pour "Sortie mutation" -->
+                <form class="form-sortie-mutation" id="form-sortie-mutation" style="display: none;">
+                    <div class="div-sortie-mutation">
+                    <label for="specialite">Spécialité de la responsabilité médicale</label>
+                    <input type="text" id="specialite" name="specialite">
+                </div>
+                <div class="div-sortie-mutation">
+                    <label for="responsabilite-hebergement">Responsabilité d'hébergement</label>
+                    <input type="text" id="responsabilite-hebergement" name="responsabilite-hebergement">
+                </div>
+                <div class="div-sortie-mutation">
+                    <label for="place_trouveeM">Place trouvée</label>
+                    <input type="checkbox" id="place_trouveeM" name="place_trouveeM">
+                </div>
+                <div class="div-sortie-mutation">
+                    <label for="dh-prevueT">Date et heure prévue de transfert</label>
+                    <input type="datetime" id="dh-prevueT" name="dh-prevueT">
+                </div>
+                <div class="div-sortie-mutation">
+                    <label for="mobilite">Mobilité</label>
+                    <select id="mobiliteM" name="mobiliteM">
+                
+                        <option value=""></option>
+                    </select><br>
+                </div>
+                <div class="G-button ">
+                    <button type="reset"><img src="images/restart.png" alt="reinitialiser">Réinitialiser</button>
+                    <button type="submit"><img src="images/saveclose.png" alt="saveclose">Enregistrer et fermer</button>
+                </div>
+                    </form>
 
+                    <!-- Formulaire pour "Décès" -->
+                <form class="form-deces" id="form-deces" style="display: none;">
+                    <div class="div-form-deces">
+                    <label for="dh-deces">Date et heure de décès</label>
+                    <input type="datetime-local" id="dh-deces" name="dh-deces">
+                </div>
+                <div class="div-form-deces">
+                    <label for="certificat-deces">Certificat de décès signé par</label>
+                    <input type="text" id="certificat-deces" name="certificat-deces">
+                </div>
+                <div class="div-form-deces">
+                    <label for="transfert-corps">Transfert du corps</label>
+                    <input type="radio" id="transfert-corpsD" value="Domicile" name="transfert-corps">Domicile
+                    <input type="radio" id="transfert-corpsM" value="Morgue" name="transfert-corps">Morgue
+                </div>
+                <div class="div-form-deces">
+                    <input type="checkbox" id="famille-prevenue" name="prevenue">Famille prévenue
+                    <input type="checkbox" id="famille-presente" name="prevenue">Famille présente
+                </div>
+                <div class="G-button ">
+                    <button type="reset"><img src="images/restart.png" alt="reinitialiser">Réinitialiser</button>
+                    <button type="submit"><img src="images/saveclose.png" alt="saveclose">Enregistrer et fermer</button>
+                </div>
+                    </form>
+                </div>
+            
+            </main> 
+        </div>
+    </div>
+
+<div id="popupConclusion" class="popupConclusion">
+        <div class="popupConclusion-content">
+            <nav class="nav-conclusion">
+                <div class="titre-conclusion">
+                    <div class="logoConclusion">
+                        <img src="images/conclusion.png" alt="LogoConclusion">
+                    </div>
+                    <h3>Conclusion</h3>
+                </div>
+                <a href="#" onclick="closePopupConclusion()"><img src="images/x.png" alt="x"></a>
+            </nav>
+            <main>
+                <h4>Informations sur la conclusion</h4>
+                <label for="medecinC">Médecin</label>
+                <input type="datetime-local" name="medecinC" id="medecinC">par<input type="text" name="medecinCN" id="medecinCN"><br>
+
+                <label for="residentC">Résident</label>
+                <input type="datetime-local" name="residentC" id="residentC">par<input type="text" name="residentCN" id="residentCN" placeholder="Nom de l'interne..."><br>
+
+                <label for="conclusionC">Conclusion</label>
+                <textarea name="conclusionC" id="conclusionC"></textarea><br>
+
+                <label for="gemsa">GEMSA</label>
+                <select name="gemsa" class="gemsa">
+                    <option value="" selected disabled>-- sélectionner une option --</option>
+                </select>
+
+                <h4>Diagnostics</h4>
+                <label for="DP">DP</label>
+                <input type="text" name="DP" id="DP" placeholder="Diagnostic primaire..."><br>
+
+                <label for="DAS">DAS</label>
+                <input type="text" name="DAS" id="DAS" placeholder="Diagnostic secondaire..."><br>
+                <button><img src="images/plus.png">Ajouter un diagnostic</button>
+
+                <h4>Actes</h4>
+                <label for="CAM">CAM</label>
+                <input type="text" name="CAM" id="CAM"><br>
+                <button><img src="images/plus.png">Ajouter un acte CAM</button>
+
+                <div class="button-container">
+                    <button type="reset"><img src="images/restart.png" alt="reinitialiser">Réinitialiser</button>
+                    <button type="submit"><img src="images/saveclose.png" alt="saveclose">Enregistrer et fermer</button>
+                    <button><img src="images/imprimer.png" alt="print">Imprimer</button>
+                </div>
+            </main>
+        </div>    
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 <script>
     function capitalizeFirstLetter(string) {
