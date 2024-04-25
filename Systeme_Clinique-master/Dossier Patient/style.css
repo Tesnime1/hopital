@@ -442,5 +442,385 @@ img{
   color: #005E5D;
   cursor: pointer;
 }
+.popupOrientation {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
+
+.logoOrientation {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(102%) contrast(102%);
+}
+
+.popupOrientation-content {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; 
+  flex-direction: column; /* Change la direction du flux en vertical */
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  width: 70%; /* Largeur fixe */
+  height: 80%;
+}
+
+.nav-orientation {
+  background: #005e5d;
+  display: flex;
+  align-items: center; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; /* Ajout de bordure supérieure droite */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.titre-orientation{
+  display:flex;
+  align-items: center; 
+   
+}
+.nav-orientation a{
+  margin-left: auto;
+}
+.nav-orientation h3 {
+  margin: 0; 
+  color: white; 
+  font-weight: 500;
+  padding: 10px; /* Ajout de rembourrage */
+}
+
+.nav-DetailOrientation {
+  display: flex; /* Utilisation de flexbox */
+  flex-direction: column; /* Affichage des éléments en colonne */
+  gap: 4vh; /* Espacement entre les éléments */
+  background:rgba(119, 166, 165, 1);
+  padding: 50px 20px 10px 20px;
+ 
+}
+.nav-main{
+  display: flex;
+  width: 100%;
+ height: 100%;
+}
+.nav-DetailOrientation a {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color:rgba(0, 94, 93, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  gap: 7px;
+ 
+}
+
+.nav-DetailOrientation a img {
+  width: 24px; /* Ajustement de la largeur */
+  height: auto; /* Réglage automatique de la hauteur */
+}
+
+.nav-DetailOrientation a:hover,
+.nav-DetailOrientation a.active1 {
+  background-color: rgba(217, 217, 217, 1);
+  color: black;
+}
+
+.nav-DetailOrientation a:hover img,
+.nav-DetailOrientation a.active1 img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(5%) hue-rotate(223deg) brightness(98%) contrast(102%);
+}
+
+.mainOrientation {
+  flex-grow: 1;
+ background-color: rgba(217, 217, 217, 1); 
+}
+.nav-DetailOrientation p{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Formulaire */
+.form-sortie-hopital , .form-uhcd, 
+.form-transfert , .form-sortie-mutation, .form-deces{
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 100px ; 
+  padding: 100px ;
+  background-color: #FFFFFF;
+  gap: 2vw;
+}
+
+/* Etiquettes */
+.form-sortie-hopital label {
+  margin: 1px 9.5px 1px 0;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 15px;
+  color: #000000;
+}
+
+/* Champs de saisie */
+.form-sortie-hopital .personne-prevenue,
+.form-sortie-hopital select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 40%; 
+}
+
+.form-sortie-hopital .orientationsortie {
+  margin-left: 100px;
+}
+
+.form-sortie-hopital .personne-prevenue {
+  margin-left: 120px; 
+  width: 39%;
+}
+
+.form-sortie-hopital .certificat-refus {
+  margin-left: 65px;
+}
+/* Radios */
+.form-sortie-hopital input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Boutons */
+.form-sortie-hopital button {
+  border-radius: 5px;
+  position: relative;
+  margin-right: 8px;
+  margin-top: auto;
+  display: inline-block;
+  flex-direction: row;
+  padding: 4px 11px 5px 8px;
+  box-sizing: border-box;
+  background-color: #005e5d;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-sortie-hopital button img,.G-button button img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.form-sortie-hopital .button-container,.G-button {
+  text-align: right;
+  margin-top: 20px; 
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+/* Formulaire uhcd*/
+
+.G-groupe,.G-place,
+.G-date_mutation ,
+ .G-mobilité , .list
+ {
+  display: flex;
+  align-items: center;
+  gap: 15%;
+}
+
+.label-groupe,
+.G-place label
+,.G-date_mutation label,
+.G-mobilité label ,.vide 
+{
+width: 150px;
+}
+/* inputs and selects design*/
+#date_heure_mutation,.mobilité, 
+.div-transfert input,.div-transfert textarea,
+ .div-sortie-mutation input
+{
+padding: 8px 17.7px 4.8px 12.7px;
+width: 200px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+.G-button button 
+{
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-top: auto;
+  display: inline-block;
+  flex-direction: row;
+  padding: 4px 11px 5px 8px;
+  background-color: #005e5d;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.form-transfert label, 
+.form-sortie-mutation label,
+.form-deces label
+{
+  width:200px ;
+}
+.div-transfert, 
+.div-sortie-mutation
+,.div-form-deces
+{
+display: flex;
+gap: 10%;
+}
+
+.radio-group
+{
+  display: flex;
+  gap: 10px;
+}
+
+
+
+.radio-group label
+ {
+  display: flex;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.radio-group label:hover 
+{
+  background-color: #ddd;
+}
+
+
+input[type="radio"]:checked + label
+ {
+  background-color: #77A6A5;
+  color: #fff;
+  border-color: #77A6A5;
+}
+
+.container-10 {
+  border-radius: 7px;
+  background: #B0B0B0;
+  position: relative;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px 5.6px 2px 5px;
+  box-sizing: border-box;
+}
+
+.g {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.container-60 {
+  border-radius: 7px;
+  background: #F19100;
+  position: relative;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px 5.6px 2px 5px;
+  box-sizing: border-box;
+}
+
+.container-19 {
+  border-radius: 7px;
+  background: #7AC856;
+  position: relative;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px 5.6px 2px 5px;
+  box-sizing: border-box;
+}
+.groupe-list{
+  margin: 0px;
+  width: 50%;
+  background-color:rgba(237, 237, 237, 1) ;
+  font-size: 14px;font-weight: 500;
+}
+
+
+.popupConclusion {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoConclusion {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(102%) contrast(102%);
+}
+
+.popupConclusion-content {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; 
+  flex-direction: column; /* Change la direction du flux en vertical */
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  width: 70%; /* Largeur fixe */
+  height: 80%;
+}
+
+.nav-conclusion {
+  background: #005e5d;
+  display: flex;
+  align-items: center; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; /* Ajout de bordure supérieure droite */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.titre-conclusion{
+  display:flex;
+  align-items: center; 
+   
+}
+.nav-conclusion a{
+  margin-left: auto;
+}
+.nav-conclusion h3 {
+  margin: 0; 
+  color: white; 
+  font-weight: 500;
+  padding: 10px; /* Ajout de rembourrage */
+}
 
 
