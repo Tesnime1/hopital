@@ -504,6 +504,7 @@ img{
   gap: 4vh; /* Espacement entre les éléments */
   background:rgba(119, 166, 165, 1);
   padding: 50px 20px 10px 20px;
+  width: 20%;
  
 }
 .nav-main{
@@ -543,10 +544,13 @@ img{
 .mainOrientation {
   flex-grow: 1;
  background-color: rgba(217, 217, 217, 1); 
+ width: 80%;
+
 }
 .nav-DetailOrientation p{
   font-size: 16px;
   font-weight: 500;
+ 
 }
 
 /* Formulaire */
@@ -557,6 +561,9 @@ img{
   border-radius: 5px;
   margin: 100px ; 
   padding: 100px ;
+  overflow: auto;
+  height: calc(100% - 200px);
+
   background-color: #FFFFFF;
   gap: 2vw;
 }
